@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ name }}'s Watchlist ***title***</title>
+    <title>{{ name }}'s Watchlist *title*</title>
+    <link rel="icon" href="{{ url_for('static',filename='images/icon.ico') }}" >
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" type="text/css">
 </head>
 <body>
-    <h2>{{ name }}'s Watchlist ***h2***</h2>
+    <h2>
+        <img alt="Avatar" src="{{ url_for('static', filename='images/touxiang.png') }}">
+        {{ name }}'s Watchlist 
+    </h2>
     <p>{{ movies|length }} Titles</p>
-    <ul>
+    <ul class="movie-list">
         {% for movie in movies %}
         <li>{{ movie.title }} - {{ movie.year}}</li>
         {% endfor %}
     </ul>
+    <img alt="kobe" class="kobe" src="{{ url_for('static',filename='images/dong.gif') }}">
     <footer>
-        <small>&copy; 2021 ***0922*** <a href="http://helloflask.com/tutori
-al">HelloFlask ***0922***</a></small>
+        <small>&copy; 2021 *0922* <a href="http://helloflask.com/tutori
+al">HelloFlask *0922*</a></small>
     </footer>
 </body>
 </html>

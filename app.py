@@ -11,14 +11,15 @@ def hello():
 @app.route('/test')
 def test_url_for():
     a = url_for('test_url_for', num=2)
-    return '<h3>%s</h3>' % a
+    # return '<h3>%s</h3>' % a
+    return f"<h3>{a}</h3>"
 
 @app.route('/index')
 def index():
     return render_template('index.html', name=name, movies=movies)
 
 
-name = 'Grey Li ***uhxh***'
+name = 'Grey Li *uhxh*'
 movies = [
     {'title': 'My Neighbor Totoro', 'year': '1988'},
     {'title': 'Dead Poets Society', 'year': '1989'},
