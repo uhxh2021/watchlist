@@ -1,5 +1,5 @@
 body {
-    margin: 100px;
+    margin: 40px;
     max_width: 580px;
     font-size: 14px;
     font-family: Helvetica, Arial, sans-serif;
@@ -40,4 +40,42 @@ footer {
     display: block;
     margin: 0 auto;
     height: 100px;
+}
+
+nav ul {
+    list-style_tpye: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+.float-right {
+    float: right;
+}
+
+.douban {
+    font-size: 12px;
+    font-weight: bold;
+    color: greenyellow;
+    text-decoration: none;
+    background: #f173ac;
+    border-radius: 5px;
+    padding: 3px 5px;
 }

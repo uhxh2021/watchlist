@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -24,4 +24,20 @@
 al">HelloFlask *0922*</a></small>
     </footer>
 </body>
-</html>
+</html> -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ movies|length }} Titles</p>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>{{ movie.title }} - {{ movie.year}}
+        <span class="float-right">
+            <a class="douban" href="https://movie.douban.com/subject_search?search_text={{ movie.title }}" target="_blank" title="Find this movie on Douban">DouBan</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+<img alt="kobe" class="kobe" src="{{ url_for('static',filename='images/dong.gif') }}" title="kobe~kobe~">
+{% endblock %}
