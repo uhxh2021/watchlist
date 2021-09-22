@@ -43,7 +43,7 @@ footer {
 }
 
 nav ul {
-    list-style_tpye: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -73,9 +73,9 @@ nav li a:hover {
 .douban {
     font-size: 12px;
     font-weight: bold;
-    color: greenyellow;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    background: #f173ac;
+    background: #2b964b;
     border-radius: 5px;
     padding: 3px 5px;
 }
@@ -98,7 +98,7 @@ input[name=year] {
     text-decoration: none;
     cursor: pointer;
     background-color: goldenrod;
-    color: grey;
+    color: rgb(5, 5, 5);
     border: 1px solid #555555;
     border-radius: 5px; 
 }
