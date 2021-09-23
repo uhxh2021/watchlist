@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>Hello Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body background="{{ url_for('static', filename='images/hellopage.png') }}">
+	
+    <h1 align="center" style="color:#145b7d;font-size:50px">Welcome to Watchlist  <a  class="btn_go" href="{{ url_for('index') }}">   Go To List   </a></h1>
+
+</body>
+</html>
+
+
+
