@@ -45,6 +45,7 @@ def inject_user():
     return dict(user=user)
 
 @app.route('/index', methods=['GET', 'POST'])
+
 def index():
     if request.method == 'POST':
         if not current_user.is_authenticated:
@@ -87,6 +88,7 @@ def edit(movie_id):
         movie.title = title
         movie.year = year
         db.session.commit()
+        flash('Item updated.')
         return redirect(url_for('index'))
     return render_template('edit.html', movie=movie)
 
@@ -108,7 +110,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         if not username or not password:
-            flash('输入有误！')
+            flash('输入错误！')
             return redirect(url_for('login'))
         user = User.query.first()
         if username == user.username and user.validate_password(password):
